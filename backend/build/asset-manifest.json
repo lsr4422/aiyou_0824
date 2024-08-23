@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5a28b299.css",
+    "main.js": "/static/js/main.2537fc83.js",
+    "static/media/aiyouWeb_background.png": "/static/media/aiyouWeb_background.a6cfdc39627c6059af0b.png",
+    "static/media/soundButton.png": "/static/media/soundButton.f380e66feea31441e129.png",
+    "static/media/soundButtonStop.png": "/static/media/soundButtonStop.a800cb4b31bfd16fbed4.png",
+    "static/media/logo_nobackground.png": "/static/media/logo_nobackground.cf915a171b24b5b46b0d.png",
+    "index.html": "/index.html",
+    "main.5a28b299.css.map": "/static/css/main.5a28b299.css.map",
+    "main.2537fc83.js.map": "/static/js/main.2537fc83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a28b299.css",
+    "static/js/main.2537fc83.js"
+  ]
+}
