@@ -1,0 +1,49 @@
+.audio-player {
+    display: flex;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 13px;
+    max-width: 100%; /* 화면 크기에 따라 최대 100%까지 확장 */
+    min-width: 50%
+}
+
+.controls {
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    margin-top: 10px; /* 적당한 여백 */
+    width:90%;
+    gap: 15px; 
+}
+
+
+.progress-bar {
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+    width: 90%;
+    margin: 5px;
+}
+
+.progress {
+    background-color: #00bfff;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.load-audio {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.load-audio {
+    background-color: white;
+    color: black;
+}

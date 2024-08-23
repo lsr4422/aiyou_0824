@@ -1,0 +1,40 @@
+.header {
+    background-image: url('../static/aiyouWeb_background.png'); /* 이미지 URL을 여기에 넣으세요 */
+    background-size: cover; /* 이미지를 커버 모드로 설정하여 전체 배경을 채우도록 함 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    height: 100vh; /* 헤더 높이 설정 */
+    color: white; /* 텍스트 색상 */
+    display: flex; /* 내용 정렬을 위한 flexbox 사용 */
+    flex-direction: column;
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: flex-end; /* 수평 오른쪽 정렬 */
+    text-align: right; /* 텍스트 오른쪽 정렬 */
+    padding: 7%; /* 아이템들이 화면의 오른쪽 가장자리에 붙지 않도록 여백 추가 */
+    font-family: Verdana, sans-serif;
+  }
+
+  .header p {
+    margin-top: -15px;
+    margin-bottom: 45px;
+    font-size: 21px;
+    font-family: Verdana, sans-serif;
+  }
+
+
+/* 버튼 */
+.custom-button {
+    background-color: transparent;
+    border: 6px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  color: #8758feff; 
+  border-color: #8758feff;
+}

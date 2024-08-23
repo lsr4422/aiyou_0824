@@ -1,0 +1,9 @@
+.footer {
+    background-color: black;
+    height: 20vh; 
+    display: flex; /* 내용 정렬을 위한 flexbox 사용 */
+    flex-direction: column;
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 오른쪽 정렬 */
+    text-align: center; /* 텍스트 오른쪽 정렬 */
+  }

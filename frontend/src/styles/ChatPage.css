@@ -1,0 +1,407 @@
+/* 프롬프트 박스 */
+
+
+
+.chat-page {
+    width: 100%;
+    background-color: black;
+    color: white;
+    /* 텍스트 색상 */
+    display: flex;
+    /* 내용 정렬을 위한 flexbox 사용 */
+    flex-direction: column;
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+    padding: 7%;
+    box-sizing: border-box;
+    /* 패딩이 요소의 크기 내에 포함되도록 설정 */
+}
+
+
+
+
+
+
+
+
+
+.menu-box {
+  position: absolute; /* 화면에서 고정된 위치에 배치 */
+  top: 141.5vh; /* 화면의 아래쪽에서 20px 떨어진 위치 */
+  left: 3%; /* 화면의 오른쪽에서 20px 떨어진 위치 */
+  width: 15%; /* div의 너비 */
+  height: 100px; /* div의 높이 */
+  z-index: 1000; /* 다른 요소들 위에 배치되도록 설정 */
+  box-sizing: border-box; /* 패딩 포함된 박스 모델 사용 */
+  text-align: left;
+}
+
+.menu-box .menu{
+  position: relative;
+  display: inline-block;
+}
+
+.menu-box .menu::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* 밑줄 두께 */
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255); /* 밑줄 색상 */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-box .menu:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prompt-box {
+    background-color: black; /* 배경색 */
+    border-radius: 15px;
+    /* padding: 30px; */
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    width: 800px; /* 고정된 너비 */
+    min-height: 435px; /* 고정된 높이 */
+    box-shadow: 2px 2px 20px 7.5px rgb(255, 255, 255, 0.3); /*그림자 효과 */
+    color: white; /* 텍스트 색상 */
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box; /* 패딩을 포함한 박스 모델을 사용 */
+    overflow-x: hidden; /* 가로 스크롤 숨기기 (필요한 경우) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 요소들 사이에 균등한 간격 */
+    /* align-items: center; 수평 가운데 정렬 */
+    scrollbar-color: #777777ff black;
+    margin-bottom: 15px;
+    transition: all 1.5s ease;
+  }
+
+
+  
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+  }
+  
+  .toggle-input {
+    display: none;
+  }
+  
+  .toggle-label {
+    width: 45px;
+    height: 25px;
+    background-color: #555;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 13px;
+  }
+  
+  .toggle-input:checked + .toggle-label {
+    background-color: gray;
+  }
+  
+  .toggle-ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #ddd;
+    border-radius: 50%;
+    top: 1.75px;
+    left: 1.75px;
+    transition: all 0.3s;
+  }
+  
+  .toggle-input:checked + .toggle-label .toggle-ball {
+    transform: translateX(20px);
+  }
+  
+  .prompt-label {
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 21px;
+
+  }
+  
+  .prompt-textarea {
+    width: 100%; /* 텍스트 영역이 부모 요소의 전체 너비를 차지 */
+    height: 225px; /* 높이 조정 */
+    /* border-radius: 10px; */
+    background-color: #49494981;
+    font-family: Verdana, sans-serif;
+    border: none;
+    padding: 10px;
+    color: white;
+    resize: none;
+    outline: none;
+    font-size: 16px; /* 폰트 크기 증가 */
+    box-sizing: border-box; /* 패딩을 포함한 박스 모델 */
+    margin-top: -10px;
+  }
+  
+  .advanced-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .buttons-row {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap; /* 버튼이 줄바꿈되도록 설정 */
+    gap: 10px; /* 버튼 간의 간격 조정 */
+
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+  }
+  
+  .mode-button {
+    display: flex;
+    padding: 10px 20px;
+    /* padding: 10px; */
+    border-radius: 30px;
+    height: 50px;
+    width: 125px;
+    border: 3.5px solid #8e5eff;
+    background-color: transparent;
+    color: #8e5eff;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .mode-button.selected {
+    background-color: #e10de1;
+    color: black;
+  }
+   */
+  .mode-button.blue {
+    border-color: #57acf3;
+    color: #57acf3;
+  }
+  
+  .mode-button.blue.selected {
+    background-color: #57acf3;
+    color: #1e1e1e;
+  }
+
+  .mode-button.pink {
+    border-color: #e10de1;
+    color: #e10de1;
+  }
+  
+  .mode-button.pink.selected {
+    background-color: #e10de1;
+    color: #1e1e1e;
+  }
+
+  .generate-button {
+    width: 175px; 
+    height: 60px;
+    padding: 20px; /* 버튼 크기 증가 */
+    border-radius: 70px;
+    background-color: #777777ff;
+    color: black;
+    font-weight: bold;
+    font-size: 22px; /* 폰트 크기 증가 */
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box; /* 패딩을 포함한 박스 모델 */
+    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    margin-bottom: -15px;
+
+    /* text-transform: uppercase; */
+  }
+  
+  .generate-button:hover {
+    background-color: white;
+  }
+  
+
+
+
+
+
+
+.generated-output-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+    font-family: Verdana, sans-serif;
+}
+
+.generated-output {
+    width: 760px;
+    height: 190px;
+    margin-bottom: -28px;
+    margin-top: 17px;
+    padding: 15px;
+    background-color: #323232;
+    /* box-shadow: 1.5px 1.5px 20px 7.5px rgb(255, 255, 255, 0.3);  */
+    box-shadow: 1.5px 1.5px 20px 7.5px rgb(0, 0, 0, 0.85);
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.generated-output:hover {
+  transform: translateY(-10px);
+  box-shadow: 1.5px 1.5px 25px 10px rgb(0, 0, 0, 0.85);
+}
+
+
+.generated-output li::marker {
+  color: #e10de1;
+}
+
+
+
+.generated-output h3 {
+    margin: 0px 0px 10px;
+    color: #e10de1;
+    font-size: 22px;
+    /* margin-left: 0px; */
+    margin-bottom: 20px;
+    
+    font-family: Verdana, sans-serif;
+  
+}
+
+
+
+.generated-output p {
+    margin: 0;
+    max-width: 650px;
+    max-height: 50px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #c4c4c4;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    
+    overflow-wrap: break-word;
+    overflow: auto;
+
+    scrollbar-color: #323232 #777777ff;
+}
+
+
+/* 다운 */
+
+.download-button {
+    background-color: #777777ff;
+    border: 2px solid #777777ff;
+    border-radius: 25px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+}
+
+.download-button:hover {
+  color: black; 
+  border-color: white;
+  background-color: white;
+}
+
+/* 로딩 */
+.spinner {
+    width: 135px;
+    height: 135px;
+    border: 5px solid rgba(0, 0, 0, 0.1);   
+    border-radius: 50%;                   
+    background: linear-gradient(135deg, #ff007f 0%, #ff007f 13%, #00d4ff 100%);
+    background-clip: padding-box;        
+    animation: spin 1s linear infinite;
+    
+    margin-top: 50px;
+
+    top: -100px; /*spinner를 위쪽으로 이동*/
+    position: relative;
+    /* left: 37.5%; */
+    left: 40%;
+    transform: translate(-50%);
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+
+
+}
+
+
+.generating-text {
+  margin-bottom: 100px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+
+
+
+
