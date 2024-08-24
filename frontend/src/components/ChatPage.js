@@ -224,8 +224,12 @@ const ChatPage = () => {
                     body:
                         <div>
                             <p>We specialize in creating Vital presets.</p>
+                            <br></br>
                             <p>To utilize these presets, <span style={{ color: 'red' }}><strong>you will need to install the Vital synthesizer</strong></span>, which is available for free.</p>
+                            <p>(https://vital.audio/)</p>
+                            <br></br>
                             <p>This software is essential for accessing and using the custom sound designs we provide.</p>
+                            <br></br>
                             <p>Make sure to install Vital to fully explore the potential of our presets in your music production.</p>
                         </div>
                 })}>
