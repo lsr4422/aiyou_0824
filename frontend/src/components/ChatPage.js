@@ -142,13 +142,13 @@ const ChatPage = () => {
                 setGenreButtons(["Cinematic", "Hip-Hop R&B", "House", "Synthwave", "ALL"]);
                 break;
             case "Lead":
-                setGenreButtons(["Drum and Bass", "Hardcore / Hardstyle", "Hip-Hop R&B", "House", "Synthwave", "Techno", "Random", "Trance", "ALL"]);
+                setGenreButtons(["Drum and Bass", "Hardcore / Hardstyle", "Hip-Hop R&B", "House", "Synthwave", "Techno", "Trance", "ALL"]);
                 break;
             case "Pad":
                 setGenreButtons(["Cinematic", "Ambient", "Drum and Bass", "All"]);
                 break;
             case "Atmosphere":
-                setGenreButtons(["Cienmatic", "Ambient", "All"]);
+                setGenreButtons(["Cinematic", "Ambient", "All"]);
                 break;
             // 추가 케이스를 필요에 따라 설정
             default:
@@ -304,7 +304,7 @@ const ChatPage = () => {
                     {isToggled ? (
                         <div className="advanced-mode">
                             <div className="buttons-row">
-                                {["Bass", "Keys", "Lead", "Pad", "Atmosphere", "Arp", "Chord", "Drums", "Fx", "Pluck", "Seq", "Synth", "Others",].map((label, index) => (
+                                {["Bass", "Keys", "Lead", "Pad", "Atmosphere", "Chord", "Drums", "Fx", "Pluck", "Seq", "Synth", "Others", "Reese", "Sub", "Drone"].map((label, index) => (
                                     <React.Fragment key={index}>
                                         <button
                                             className={`mode-button pink ${selectedTypeButton === index ? 'selected' : ''}`}
